@@ -1,0 +1,6 @@
+- Add accurate dimentions for tracking wheel
+- Fine Tune PIDs
+- Find use of vertical encoder and update robot_config.cpp accordingly
+- Finish creating path jerry auton controls
+- Test and clean auton after coding theoretical auton
+- Update accurate wheel setting dimentions

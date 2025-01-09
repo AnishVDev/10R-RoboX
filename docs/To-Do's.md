@@ -1,0 +1,4 @@
+- Need to work on precise PID Tuning
+- Need to code inertial sensor (gyroscope) and tracking wheel after adding them to robot
+- Need to add multiple autonomous paths depending on alliance strategy
+- Need to code lift mechanism after building it
