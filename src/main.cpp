@@ -84,7 +84,7 @@ void initialize() {
 ASSET(path_jerryio_txt)  // First part of right auton
 ASSET(path_jerryio2_txt) // Second part of right auton
 ASSET(path_jerryio3_txt) // First part of left auton
-ASSET(path_jerryio4_txt) // Secoind part of left auton
+ASSET(path_jerryio4_txt) // Second part of left auton
 
 void autonomous() {
     // set chassis pose
