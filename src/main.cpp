@@ -62,6 +62,7 @@
 #include "intake.h"
 #include "pneumatics.h"
 #include "pros/llemu.hpp"
+#include "robot_config.cpp"
 
 // Global objects
 pros::Controller master(pros::E_CONTROLLER_MASTER);
@@ -84,7 +85,7 @@ void initialize() {
 ASSET(path_jerryio_txt)  // First part of right auton
 ASSET(path_jerryio2_txt) // Second part of right auton
 ASSET(path_jerryio3_txt) // First part of left auton
-ASSET(path_jerryio4_txt) // Second part of left auton
+ASSET(path_jerryio4_txt) // Secoind part of left auton
 
 void autonomous() {
     // set chassis pose
@@ -127,7 +128,9 @@ void autonomous() {
     chassis.moveToPose(60, 0, 125, 2000);
     */
     
+
     //Right Auton
+
 
     // lookahead distance: 15 inches
     // timeout: 2000 ms
@@ -153,7 +156,8 @@ void autonomous() {
 
 
     //Left Auton
-    
+
+    /**
     // lookahead distance: 15 inches
     // timeout: 2000 ms
     chassis.follow(path_jerryio3_txt, 15, 2000, false);
@@ -175,7 +179,7 @@ void autonomous() {
     pros::delay(1000); // Run intake for 1 second
     intake.stopIntake(); // Stop the intake
     pros::delay(500);
-    
+    */
 }
 
 

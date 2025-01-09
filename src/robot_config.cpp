@@ -4,7 +4,6 @@
 
 // Sensors
 pros::Imu imu(9); // IMU on port #
-//pros::adi::Encoder vertical_encoder('C', 'D', true); // Vertical tracking wheel encoder on ADI ports C and D
 
 // PID Controllers
 lemlib::ControllerSettings lateral_controller(
