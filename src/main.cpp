@@ -27,20 +27,22 @@
  * Lady Brown: Used for high stake intake (port 11)
  *
  * Sensors:
- * 
- * 
+ * IMU - Inertial sensor for tracking movement
+ * Vertical encoder (Vertical Tracking Wheel) - uses a rotational sensor to track vertical movement specifically
  * 
  * 
  * Ports:
- * 1 - Left motor (contors wheels 1 & 2)
- * 2 - Left motor (contors wheels 2 & 3)
- * 3 - Left motor (contors wheels 3 & 4)
- * 4 - Right motor (contors wheels 5 & 6)
- * 5 - Right motor (contors wheels 6 & 7)
- * 6 - Right motor (contors wheels 7 & 8)
+ * 1 - Left motor (controls wheels 1 & 2)
+ * 2 - Left motor (controls wheels 2 & 3)
+ * 3 - Left motor (controls wheels 3 & 4)
+ * 4 - Right motor (controls wheels 5 & 6)
+ * 5 - Right motor (controls wheels 6 & 7)
+ * 6 - Right motor (controls wheels 7 & 8)
  * 7 - Intake motor
- * 8 - Tracking Wheel
- * 9 - 
+ * 8 - IMU
+ * 9 - Rotational Sensor
+ * 10 - Lady Brown
+ * 11 - Radar
  *    _____         .__       .__  ____   ____________                
  *   /  _  \   ____ |__| _____|  |_\   \ /   /\______ \   _______  __ 
  *  /  /_\  \ /    \|  |/  ___/  |  \   Y   /  |    |  \_/ __ \  \/ / 
@@ -79,8 +81,10 @@ void initialize() {
     chassis.calibrate(); // Calibrate IMU and tracking wheel
 }
 
-ASSET(path_jerryio_txt)
-ASSET(path_jerryio2_txt)
+ASSET(path_jerryio_txt)  // First part of right auton
+ASSET(path_jerryio2_txt) // Second part of right auton
+ASSET(path_jerryio3_txt) // First part of left auton
+ASSET(path_jerryio4_txt) // Second part of left auton
 
 void autonomous() {
     // set chassis pose
@@ -122,6 +126,8 @@ void autonomous() {
     // Forward to (60, 0), facing 125 degrees
     chassis.moveToPose(60, 0, 125, 2000);
     */
+    
+    //Right Auton
 
     // lookahead distance: 15 inches
     // timeout: 2000 ms
@@ -141,9 +147,35 @@ void autonomous() {
 
     // Turn on the intake
     intake.setIntake(130);
+    pros::delay(1000); // Run intake for 1 seconds
+    intake.stopIntake(); // Stop the intake
+    pros::delay(500);
+
+
+    //Left Auton
+    
+    // lookahead distance: 15 inches
+    // timeout: 2000 ms
+    chassis.follow(path_jerryio3_txt, 15, 2000, false);
+
+    // Close the clamp
+    pneumatics.setClampState(true);
+    pros::delay(500); // Ensure the clamp actuates
+
+    // Turn on the intake
+    intake.setIntake(130);
     pros::delay(500); // Run intake for 0.5 seconds
     intake.stopIntake(); // Stop the intake
     pros::delay(500);
+
+    chassis.follow(path_jerryio4_txt, 15, 2000, true);
+
+    // Turn on the intake
+    intake.setIntake(130);
+    pros::delay(1000); // Run intake for 1 second
+    intake.stopIntake(); // Stop the intake
+    pros::delay(500);
+    
 }
 
 

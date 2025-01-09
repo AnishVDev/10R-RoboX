@@ -1,0 +1,34 @@
+-30.499, 28.636, 92.222
+-32.181, 29.717, 91.03
+-33.915, 30.713, 88.706
+-35.703, 31.607, 85.796
+-37.555, 32.359, 82.784
+-39.466, 32.947, 79.658
+-41.432, 33.305, 76.406
+-43.427, 33.391, 73.011
+-45.409, 33.149, 70.339
+-47.312, 32.549, 70.282
+-49.071, 31.604, 72.741
+-50.638, 30.367, 76.684
+-52.003, 28.907, 80.59
+-53.175, 27.288, 77.376
+-54.18, 25.56, 74.023
+-55.045, 23.758, 70.509
+-55.78, 21.898, 66.811
+-56.412, 20.001, 62.895
+-56.952, 18.075, 58.718
+-57.414, 16.13, 54.221
+-57.802, 14.168, 49.314
+-58.132, 12.195, 43.863
+-58.406, 10.214, 37.629
+-58.627, 8.227, 30.133
+-58.803, 6.235, 20
+-58.902, 4.889, 0
+-58.902, 4.889, 0
+-60.365, -15.057, 0
+endData
+127
+100
+200
+-30.499, 28.636, -49.356, 41.441, -57.505, 26.774, -58.902, 4.889
+#PATH.JERRYIO-DATA {"appVersion":"0.8.3","format":"LemLib v0.5","gc":{"robotWidth":11.811023622047244,"robotHeight":11.811023622047244,"robotIsHolonomic":false,"showRobot":true,"uol":2.54,"pointDensity":2,"controlMagnetDistance":1.968503937007874,"fieldImage":{"displayName":"V5RC 2025 - High Stakes","signature":"V5RC 2025 - High Stakes","origin":{"__type":"built-in"}},"coordinateSystem":"VEX Gaming Positioning System"},"paths":[{"segments":[{"controls":[{"uid":"F9ZRX6h5Y9","x":-30.498561477892185,"y":28.6360539067232,"lock":false,"visible":true,"heading":0,"__type":"end-point"},{"uid":"tkOAfWMacd","x":-49.35645063597819,"y":41.440793458509994,"lock":false,"visible":true,"__type":"control"},{"uid":"xNYWqwdUMl","x":-57.50492125984252,"y":26.773546335554215,"lock":false,"visible":true,"__type":"control"},{"uid":"D6NV8AnmS7","x":-58.90180193821926,"y":4.889082374318595,"lock":false,"visible":true,"heading":0,"__type":"end-point"}],"speedProfiles":[],"lookaheadKeyframes":[],"uid":"hsntbGC8Dn"}],"pc":{"speedLimit":{"minLimit":{"value":0,"label":"0"},"maxLimit":{"value":127,"label":"127"},"step":1,"from":20,"to":100},"bentRateApplicableRange":{"minLimit":{"value":0,"label":"0"},"maxLimit":{"value":1,"label":"1"},"step":0.001,"from":0,"to":0.1},"maxDecelerationRate":127},"name":"Path","uid":"KH807X93Lm","lock":false,"visible":true}]}
