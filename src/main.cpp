@@ -62,7 +62,6 @@
 #include "intake.h"
 #include "pneumatics.h"
 #include "pros/llemu.hpp"
-#include "robot_config.cpp"
 
 // Global objects
 pros::Controller master(pros::E_CONTROLLER_MASTER);
